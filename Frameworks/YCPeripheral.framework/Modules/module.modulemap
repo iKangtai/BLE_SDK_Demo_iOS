@@ -1,0 +1,6 @@
+framework module YCPeripheral {
+  umbrella header "YCPeripheral.h"
+
+  export *
+  module * { export * }
+}
