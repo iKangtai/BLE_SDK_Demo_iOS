@@ -56,6 +56,8 @@ typedef NS_ENUM(NSInteger, YCTemperatureFlag) {
     YCTemperatureFlagOnline,
     /// Offline
     YCTemperatureFlagOffline,
+    /// Offline end
+    YCTemperatureFlagOfflineEnd,
 };
 
 /// Thermometer type
@@ -181,8 +183,6 @@ Send specific commands to the device.
     - type: BLENotifyType
 */
 -(void)setNotifyToPeripheral:(YCPeripheral *)peripheral type:(YCNotifyType)type value:(NSInteger)value;
-
-NSString *NSStringFromYCBLECommandType(YCNotifyType type);
 
 @end
 

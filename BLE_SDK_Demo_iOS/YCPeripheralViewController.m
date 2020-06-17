@@ -155,8 +155,41 @@
     NSString *result = objs.lastObject;
     
     NSMutableString *tempStr = [NSMutableString stringWithString:self.tempView.text];
-    [tempStr appendFormat:@"%@: %@\n", NSStringFromYCBLECommandType(type), result];
+    [tempStr appendFormat:@"%@: %@\n", [self stringWithNotifyType:type], result];
     self.tempView.text = tempStr.copy;
+}
+
+-(NSString *)stringWithNotifyType:(YCNotifyType)type {
+    switch (type) {
+        case YCNotifyTypeGetPower:
+            return @"Get power.";
+        case YCNotifyTypeSetTemperatureUnitC:
+            return @"Set Temperature °C";
+        case YCNotifyTypeSetTemperatureUnitF:
+            return @"Set Temperature °F";
+        case YCNotifyTypeSetTime:
+            return @"Set time.";
+        case YCNotifyTypeGetFirmwareVersion:
+            return @"Get firmware version";
+        default:
+            return [NSString stringWithFormat:@"Unknow type: %@", @(type)];
+    }
+}
+
+-(NSString *)stringWithTemperatureFlag:(YCTemperatureFlag)flag {
+    switch (flag) {
+        case YCTemperatureFlagOnline:
+            return @"Online";
+            break;
+        case YCTemperatureFlagOffline:
+            return @"Offline begin";
+            break;
+        case YCTemperatureFlagOfflineEnd:
+            return @"Offline end";
+            break;
+        default:
+            break;
+    }
 }
 
 -(void)setPeripheral:(YCPeripheral *)peripheral {
@@ -170,7 +203,7 @@
     
     NSMutableString *tempStr = [NSMutableString stringWithString:self.tempView.text];
     for (YCTemperature *tempI in temperatures) {
-        NSString *flag = tempI.flag == YCTemperatureFlagOnline ? @"online" : @"offline";
+        NSString *flag = [self stringWithTemperatureFlag:tempI.flag];
         [tempStr appendFormat:@"%.2f %@ %@\n", tempI.temperature, tempI.time, flag];
     }
     self.tempView.text = tempStr.copy;
@@ -225,7 +258,7 @@
 -(UILabel *)lable1 {
     if (_lable1 == nil) {
         _lable1 = [[UILabel alloc] init];
-        _lable1.text = @"temps:";
+        _lable1.text = @"Datas:";
         _lable1.textColor = [UIColor blackColor];
         _lable1.textAlignment = NSTextAlignmentRight;
         [self.view addSubview:_lable1];

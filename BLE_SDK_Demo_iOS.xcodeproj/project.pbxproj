@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5219C2362497B14C00273460 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5219C2352497B14C00273460 /* QuartzCore.framework */; };
 		5219C23E2497BAD800273460 /* YCConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5219C23D2497BAD800273460 /* YCConsts.m */; };
-		522EF3492497F0C900454696 /* YCPeripheral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522EF3472497F0C500454696 /* YCPeripheral.framework */; };
-		522EF34A2497F0C900454696 /* YCPeripheral.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 522EF3472497F0C500454696 /* YCPeripheral.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		524265E9249A523D003602D3 /* YCPeripheral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524265E8249A523D003602D3 /* YCPeripheral.framework */; };
 		529AD01A249365DF00DF1046 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AD019249365DF00DF1046 /* AppDelegate.m */; };
 		529AD025249365E200DF1046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529AD024249365E200DF1046 /* Assets.xcassets */; };
 		529AD028249365E200DF1046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529AD026249365E200DF1046 /* LaunchScreen.storyboard */; };
@@ -41,13 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5219C24A2497C76500273460 /* Embed Frameworks */ = {
+		524265E7249A518C003602D3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				522EF34A2497F0C900454696 /* YCPeripheral.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,10 +52,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5219C2352497B14C00273460 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5219C23C2497BAD800273460 /* YCConsts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCConsts.h; sourceTree = "<group>"; };
 		5219C23D2497BAD800273460 /* YCConsts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCConsts.m; sourceTree = "<group>"; };
-		522EF3472497F0C500454696 /* YCPeripheral.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YCPeripheral.framework; path = Frameworks/YCPeripheral.framework; sourceTree = "<group>"; };
+		524265E8249A523D003602D3 /* YCPeripheral.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YCPeripheral.framework; path = Frameworks/YCPeripheral.framework; sourceTree = "<group>"; };
 		529AD015249365DF00DF1046 /* BLE_SDK_Demo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLE_SDK_Demo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529AD018249365DF00DF1046 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		529AD019249365DF00DF1046 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,9 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5219C2362497B14C00273460 /* QuartzCore.framework in Frameworks */,
+				524265E9249A523D003602D3 /* YCPeripheral.framework in Frameworks */,
 				ECA51707C38801E2AF95D82B /* libPods-BLE_SDK_Demo_iOS.a in Frameworks */,
-				522EF3492497F0C900454696 /* YCPeripheral.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +118,7 @@
 		5219C2342497B14C00273460 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				522EF3472497F0C500454696 /* YCPeripheral.framework */,
-				5219C2352497B14C00273460 /* QuartzCore.framework */,
+				524265E8249A523D003602D3 /* YCPeripheral.framework */,
 				895E3E93229F51F82A6CAA96 /* libPods-BLE_SDK_Demo_iOS.a */,
 			);
 			name = Frameworks;
@@ -202,7 +196,7 @@
 				529AD011249365DF00DF1046 /* Sources */,
 				529AD012249365DF00DF1046 /* Frameworks */,
 				529AD013249365DF00DF1046 /* Resources */,
-				5219C24A2497C76500273460 /* Embed Frameworks */,
+				524265E7249A518C003602D3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
