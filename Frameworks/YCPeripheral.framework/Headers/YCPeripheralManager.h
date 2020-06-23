@@ -14,23 +14,15 @@
 #import <IOBluetooth/IOBluetooth.h>
 #endif
 
-///  debug 等级的枚举
-enum YCLogLevel {
+/// Logger Level
+typedef NS_ENUM(int, YCLoggerLevel) {
     /// Error
-    YCLogLevelError  = 0,
+    YCLoggerLevelAll  = 0,
     /// Info
-    YCLogLevelInfo,
+    YCLoggerLevelInfo,
     /// Debug
-    YCLogLevelDebug
+    YCLoggerLevelError
 };
-
-#ifndef YCPeripheral_h
-#define YCPeripheral_h
-
-/// Define Log Level
-#define kYCBLELogLevel YCLogLevelInfo
-
-#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -171,6 +163,13 @@ didFailToConnectPeripheral:(YCPeripheral *)peripheral
 
 /// The shared Thermometer object for the process.
 +(instancetype)shared;
+
+/**
+Set Logger Level.
+    - parameters:
+    - level: YCLoggerLevel
+ */
+-(void)setLoggerLevel:(YCLoggerLevel)level;
 
 /**
 Start scan.
