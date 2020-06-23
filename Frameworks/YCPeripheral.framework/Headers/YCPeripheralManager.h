@@ -14,6 +14,24 @@
 #import <IOBluetooth/IOBluetooth.h>
 #endif
 
+///  debug 等级的枚举
+enum YCLogLevel {
+    /// Error
+    YCLogLevelError  = 0,
+    /// Info
+    YCLogLevelInfo,
+    /// Debug
+    YCLogLevelDebug
+};
+
+#ifndef YCPeripheral_h
+#define YCPeripheral_h
+
+/// Define Log Level
+#define kYCBLELogLevel YCLogLevelInfo
+
+#endif
+
 NS_ASSUME_NONNULL_BEGIN
 
 /// YCBLEState
