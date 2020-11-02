@@ -25,6 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [YCPeripheralManager shared].delegate = self;
+    [[YCPeripheralManager shared] setLoggerLevel:YCLoggerLevelAll];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[YCMainViewController alloc] init]];
